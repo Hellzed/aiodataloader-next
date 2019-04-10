@@ -10,6 +10,9 @@ __version__ = '0.1.2'
 
 Loader = namedtuple('Loader', 'key,future')
 
+def iscoroutinefunctionorpartial(fn):
+    return iscoroutinefunction(fn.func if isinstance(fn, partial) else fn)
+
 
 class DataLoader(object):
 
@@ -24,7 +27,7 @@ class DataLoader(object):
         if batch_load_fn is not None:
             self.batch_load_fn = batch_load_fn
 
-        assert iscoroutinefunction(self.batch_load_fn), "batch_load_fn must be coroutine. Received: {}".format(self.batch_load_fn)
+        assert iscoroutinefunctionorpartial(self.batch_load_fn), "batch_load_fn must be coroutine. Received: {}".format(self.batch_load_fn)
 
         if not callable(self.batch_load_fn):
             raise TypeError((
