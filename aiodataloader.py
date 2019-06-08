@@ -72,7 +72,7 @@ class DataLoader(object):
         Loads a key, returning a `Future` for the value represented by that key.
         """
         if key is None:
-            raise TypeError(("The loader.load() function must be called with a value," + "but got: {}.").format(key))
+            raise TypeError(("The loader.load() function must be called with a value, but got: {}.").format(key))
 
         cache_key = self.get_cache_key(key)
 
@@ -120,7 +120,7 @@ class DataLoader(object):
         """
         if not isinstance(keys, Iterable):
             raise TypeError(
-                ("The loader.load_many() function must be called with Iterable<key> " + "but got: {}.").format(keys)
+                ("The loader.load_many() function must be called with Iterable<key> but got: {}.").format(keys)
             )
 
         return gather(*[self.load(key) for key in keys])
