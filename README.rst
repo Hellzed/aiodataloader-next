@@ -1,7 +1,7 @@
 AIODataLoader-next
 ==================
 
-This a fork from the
+This is a fork from the
 `asyncio DataLoader <https://github.com/syrusakbary/aiodataloader/>`__
 including community fixes and Python 3.7+ compatibility.
 
