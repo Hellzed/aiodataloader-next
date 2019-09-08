@@ -24,7 +24,7 @@ tests_require = [
 ]
 
 setup(
-    name='aiodataloader',
+    name='aiodataloader-next',
     version=version,
     description='Asyncio DataLoader implementation for Python',
     long_description=open('README.rst').read(),
