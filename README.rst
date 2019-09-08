@@ -34,7 +34,7 @@ First, install DataLoader using pip.
 
 .. code:: sh
 
-    pip install aiodataloader
+    pip install aiodataloader-next
 
 To get started, create a ``DataLoader``. Each ``DataLoader`` instance
 represents a unique cache. Typically instances are created per request

@@ -31,7 +31,7 @@ this repository.
 First, install DataLoader using pip.
 
 ```sh
-pip install aiodataloader
+pip install aiodataloader-next
 ```
 
 To get started, create a `DataLoader`. Each `DataLoader` instance represents a
