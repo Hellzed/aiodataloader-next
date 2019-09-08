@@ -30,8 +30,8 @@ setup(
     long_description=open('README.rst').read(),
     url='https://github.com/syrusakbary/aiodataloader',
     download_url='https://github.com/syrusakbary/aiodataloader/releases',
-    author='Syrus Akbary',
-    author_email='me@syrusakbary.com',
+    author='Syrus Akbary, The AIODataLoader contributors',
+    author_email='me@syrusakbary.com, zinsouloris@gmail.com',
     license='MIT',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
