@@ -1,6 +1,6 @@
 from asyncio import gather, ensure_future, get_event_loop, iscoroutine, iscoroutinefunction
 from collections import namedtuple
-from collections.abc import Iterable, Sized
+from collections.abc import Iterable
 from functools import partial
 
 from typing import List  # flake8: noqa
@@ -174,7 +174,7 @@ def enqueue_post_future_job(loop, loader):
 
 def get_chunks(iterable_obj, chunk_size=1):
     chunk_size = max(1, chunk_size)
-    return (iterable_obj[i : i + chunk_size] for i in range(0, len(iterable_obj), chunk_size))
+    return (iterable_obj[i: i + chunk_size] for i in range(0, len(iterable_obj), chunk_size))
 
 
 def dispatch_queue(loader):
