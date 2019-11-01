@@ -1,9 +1,9 @@
 language: python
-sudo: false
 python:
 - 3.5
 - 3.6
 - 3.7
+- 3.8
 cache: pip
 install:
 - pip install -e .[test]
@@ -20,25 +20,28 @@ matrix:
   - python: '3.5'
     install: pip install mypy
     script: mypy aiodataloader.py  --check-untyped-defs  --ignore-missing-imports
+
   - python: '3.6'
     install: pip install flake8
     script: flake8
   - python: '3.6'
     install: pip install mypy
     script: mypy aiodataloader.py  --check-untyped-defs  --ignore-missing-imports
+
   - python: '3.7'
-    sudo: required
-    dist: xenial
-    install: pip install -e .[test]
-    script: py.test --cov=aiodataloader
-    after_success: coveralls
-  - python: '3.7'
-    sudo: required
-    dist: xenial
     install: pip install flake8
     script: flake8
   - python: '3.7'
-    sudo: required
-    dist: xenial
+    install: pip install mypy
+    script: mypy aiodataloader.py  --check-untyped-defs  --ignore-missing-imports
+
+  - python: '3.8'
+    install: pip install -e .[test]
+    script: py.test --cov=aiodataloader
+    after_success: coveralls
+  - python: '3.8'
+    install: pip install flake8
+    script: flake8
+  - python: '3.8'
     install: pip install mypy
     script: mypy aiodataloader.py  --check-untyped-defs  --ignore-missing-imports
