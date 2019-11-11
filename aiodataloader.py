@@ -59,7 +59,7 @@ class DataLoader(object):
             self.cache = cache
 
         if get_cache_key is not None:
-            self.get_cache_key = get_cache_key
+            self.get_cache_key = get_cache_key  # type: ignore
 
         self._cache = cache_map if cache_map is not None else {}
         self._queue = []  # type: List[Loader]
